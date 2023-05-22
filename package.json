@@ -9,9 +9,10 @@
     "test": "ng test"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20.1.0",
+    "npm": "9.6.6"
   },
-  "heroku-postbuild": "ng build — prod",
+  "heroku-postbuild": "ng build --aot — prod",
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.0.0",

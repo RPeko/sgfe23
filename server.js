@@ -6,10 +6,10 @@ const app = express();
 app.enable('trust proxy');
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/sgfe'));
+app.use(express.static(__dirname + '/dist/sgfe23'));
 app.set('port', process.env.PORT || 5000);
 app.get('/*', function(req,res) {  
-res.sendFile(path.join(__dirname+'/dist/sgfe/index.html'));
+res.sendFile(path.join(__dirname+'/dist/sgfe23/index.html'));
 });
 app.use(function (req, res, next) {
   if (req.secure) {

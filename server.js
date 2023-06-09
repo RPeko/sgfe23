@@ -8,6 +8,7 @@ app.enable('trust proxy');
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/sgfe23'));
 app.set('port', process.env.PORT || 5000);
+console.log(process.env['BCK_URL']);
 app.get('/*', function(req,res) {  
 res.sendFile(path.join(__dirname+'/dist/sgfe23/index.html'));
 });

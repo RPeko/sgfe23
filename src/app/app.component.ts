@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.storageMap.get('srbKO').subscribe((katOpst) => {
       if (katOpst) {
         this.eventEmitter.KOChange.emit(katOpst);

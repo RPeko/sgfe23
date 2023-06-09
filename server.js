@@ -18,10 +18,6 @@ app.use(function (req, res, next) {
     res.redirect('https://' + req.headers.host + req.url);
   }
 });
-app.use('/bckurlparam271828', (req, res) => {
-  res.send('https://sgbe21.herokuapp.com');
-})
-
 // Start the app by listening on the default Heroku port
 app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

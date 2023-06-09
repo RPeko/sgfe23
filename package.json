@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
+    "heroku-prebuild": "node pre-build.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

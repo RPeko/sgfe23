@@ -1,4 +1,4 @@
-import { writeFile } from 'fs';
+var fs = require('fs');
 var str = `
 export const environment = {
     production: true,
@@ -6,7 +6,7 @@ export const environment = {
     env: '${process.env.ENV}'
 };
 `;
-writeFile("./src/environments/environment.prod.ts", str, function(err) {
+fs.writeFile("./src/environments/environment.prod.ts", str, function(err) {
    if(err) {
       return console.log(err);
    }

@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class GlobalVarsService {
 
    //baseURL = "http://localhost:8080/sgis-2.0.1";
-   //baseURL = "https://sgbe21.herokuapp.com";
-  baseURL = "https://93.87.76.62:8443/sgis-2.0.1";
+   baseURL = "https://sgbe21.herokuapp.com";
+ // baseURL = "https://93.87.76.62:8443/sgis-2.0.1";
 
 
    constructor() {

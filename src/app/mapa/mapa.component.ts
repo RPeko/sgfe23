@@ -42,14 +42,6 @@ export class MapaComponent {
   baseLayerControl: L.Control;
   baseMaps =
     {
-      'Mapbox openstreet':
-        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-          attribution: 'Â© <a href="https://www.mapbox.com/feedback/">Mapbox</a> Â© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          tileSize: 512,
-          zoomOffset: -1,
-          accessToken: 'pk.eyJ1IjoicnBla28iLCJhIjoiY2tia3JtZHllMDhncTJ0cjUwbGJyZW5ncCJ9.OkW_RmnaDWYq3pOrTb0MhA',
-          opacity: 0.5
-        }),
       'Openstreet mapnik':
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
@@ -89,7 +81,7 @@ export class MapaComponent {
   ngOnInit() {
     this.mymap = L.map('lmapa', { zoomSnap: 0.2, zoomControl: false })
       .setView(L.latLng(this.KO.centarx, this.KO.centary), this.KO.zoom);
-    this.baseMaps['Mapbox openstreet'].addTo(this.mymap);
+    this.baseMaps['Openstreet mapnik'].addTo(this.mymap);
     this.eventEmitter.KOChange.subscribe((ko: KO) => {
       // console.log(JSON.stringify(ko));
       this.KO = ko;

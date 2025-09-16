@@ -29,7 +29,7 @@ export class MapaComponent {
   
 
   mymap: L.Map;
-  selectedIdKO = 7;
+  selectedIdKO = 1;
   KO: KO = { idKO: 1, nazivKO: 'Srbobran', rBrKO: 1, centarx: 45.548926, centary: 19.792946, zoom: 15 };
   listaKO: KO[];
   layers: Array<Layer> = [];
